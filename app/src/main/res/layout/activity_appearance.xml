@@ -24,6 +24,12 @@
                 android:layout_height="match_parent"
                 android:gravity="center_vertical">
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_back"
+                    app:tint="@color/blue" />
+
                 <TextView
                     android:id="@+id/tv_back"
                     android:layout_width="wrap_content"
@@ -85,7 +91,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/view_rounded_corner"
+                        android:background="@drawable/view_rounded_corner_message"
                         android:paddingRight="15dp"
                         android:paddingLeft="15dp"
                         android:paddingTop="10dp"
@@ -93,23 +99,42 @@
                         android:gravity="center_vertical"
                         android:orientation="vertical">
 
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:background="@color/blue"
+                                android:layout_margin="3dp"
+                                android:layout_width="2.5dp"
+                                android:gravity="center_vertical"
+                                android:layout_height="37dp"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="7dp"
+                                android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bob Haris"
+                                android:textStyle="bold"
+                                android:textColor="@color/blue"
+                                android:textSize="15sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Good Morning! 👋"
+                                android:textStyle="bold"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                        </LinearLayout>
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bob Haris"
-                            android:textStyle="bold"
-                            android:textColor="@color/blue"
-                            android:textSize="15sp" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Good Morning! 👋"
-                            android:textStyle="bold"
-                            android:textSize="15sp" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Do you know what time is it"
+                            android:text="Do you know what time is it?"
                             android:textStyle="bold"
                             android:textSize="18sp" />
 

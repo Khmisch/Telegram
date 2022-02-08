@@ -54,13 +54,19 @@ class AppearanceActivity : AppCompatActivity() {
 
         private fun getAllChats(): ArrayList<Chat> {
             val chats: ArrayList<Chat> = ArrayList<Chat>()
-            for (i in 1..5) {
+            for (i in 1..6) {
                 if (i == 1 ) {
                     chats.add(Chat(R.drawable.ic_theme, "","", true))
-                }else if (i == 2 || i == 4) {
+                }else if (i == 2 ) {
                     chats.add(Chat(R.drawable.ic_theme2, "","",false ))
+                }else if (i == 3 ) {
+                    chats.add(Chat(R.drawable.ic_theme4, "","",false ))
+                }else if (i == 4 ) {
+                    chats.add(Chat(R.drawable.ic_theme3, "","",false ))
+                }else if (i == 5 ) {
+                    chats.add(Chat(R.drawable.ic_theme5, "","",false ))
                 } else {
-                    chats.add(Chat(R.drawable.ic_theme3,  "","",false))
+                    chats.add(Chat(R.drawable.ic_theme6,  "","",false))
                 }
             }
             return chats
