@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/Telegram/app/src/main/res/drawable/custom_thumb.xml" value="0.1475" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Telegram/app/src/main/res/drawable/fragment_chat.xml" value="0.2046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Telegram/app/src/main/res/drawable/shape_border_rounded.xml" value="0.19074074074074074" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Telegram/app/src/main/res/drawable/track.xml" value="0.1475" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Telegram/app/src/main/res/drawable/view_rounded_corner.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Telegram/app/src/main/res/drawable/view_rounded_corner_image.xml" value="0.2203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Telegram/app/src/main/res/drawable/view_rounded_corner_message.xml" value="0.2046875" />
