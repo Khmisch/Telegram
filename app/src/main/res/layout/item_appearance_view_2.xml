@@ -10,7 +10,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/view_rounded_corner"
         android:orientation="vertical"
-        android:padding="5dp"
         android:gravity="center_vertical">
 
 
