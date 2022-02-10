@@ -1,5 +1,6 @@
 package com.example.telegram.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.telegram.R
 import com.example.telegram.adapter.AppearenceAdapter
 import com.example.telegram.adapter.AppearenceAdapterAppIcon
+import com.example.telegram.fragment.SettingsFragment
 import com.example.telegram.model.Chat
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
@@ -20,31 +22,27 @@ class AppearanceActivity : AppCompatActivity() {
 
     lateinit var nestedScrollView: NestedScrollView
     lateinit var recyclerView: RecyclerView
+    lateinit var imageView: ImageView
 
     lateinit var recyclerView_app: RecyclerView
-     val appBarLayout: AppBarLayout = TODO()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_appearance)
         initViews()
-
+        imageView = findViewById(R.id.iv_back)
+        imageView.setOnClickListener {
+        }
     }
 
-
-
     private fun initViews() {
-
 
         nestedScrollView = findViewById(R.id.nestedScrollView)
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView_app = findViewById(R.id.recyclerView_app)
-        val horizontalLayoutManagaer =
-            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        val horizontalLayoutManagaer = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerView.layoutManager = horizontalLayoutManagaer
         refreshAdapter(getAllIcon())
-        val horizontalLayoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        val horizontalLayoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerView_app.layoutManager = horizontalLayoutManager
         refreshAdapterApp(getAllChats())
     }
@@ -58,7 +56,6 @@ class AppearanceActivity : AppCompatActivity() {
     private fun refreshAdapter(chats: ArrayList<Chat>) {
         val adapter_app = AppearenceAdapterAppIcon(this, chats)
         recyclerView_app!!.adapter = adapter_app
-
 
     }
 

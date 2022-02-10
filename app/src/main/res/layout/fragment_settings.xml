@@ -10,7 +10,6 @@
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
         app:elevation="0dp"
         android:background="@color/black">
 
@@ -18,11 +17,10 @@
             android:id="@+id/collapsingToolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fitsSystemWindows="true"
             app:contentScrim="@color/black2"
             app:title="Khurshidbek"
             app:collapsedTitleGravity="center_horizontal"
-            app:expandedTitleMarginTop="100dp"
+            app:expandedTitleMarginTop="120dp"
             app:expandedTitleGravity="center_horizontal"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
             android:elevation="0dp">

@@ -20,6 +20,8 @@ class SettingsFragment : Fragment() {
     lateinit var tv_notification: TextView
     lateinit var imageView: ImageView
     lateinit var tv_appearance: TextView
+    lateinit var mAppBarLayout: AppBarLayout
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view: View = inflater.inflate(R.layout.fragment_settings, container, false)
@@ -31,16 +33,17 @@ class SettingsFragment : Fragment() {
         EXPANDED, COLLAPSED, IDLE
     }
     private fun initViews(view: View) {
-        val TAG = "AppBarTest"
-        val mAppBarLayout: AppBarLayout = view.findViewById(R.id.appbar)
+        var TAG = "AppBarTest"
+        imageView = view.findViewById(R.id.ic_search)
+        mAppBarLayout = view.findViewById(R.id.appbar)
+
         mAppBarLayout.addOnOffsetChangedListener(object : OnOffsetChangedListener {
             private var state: State? = null
             override fun onOffsetChanged(appBarLayout: AppBarLayout, verticalOffset: Int) {
-                imageView = view.findViewById(R.id.ic_search)
                 state = if (verticalOffset == 0) {
                     if (state !== State.EXPANDED) {
                         Log.d(TAG, "Expanded")
-                        imageView.visibility = View.INVISIBLE
+                        imageView.visibility = View.GONE
                     }
                     State.EXPANDED
                 } else if (Math.abs(verticalOffset) >= appBarLayout.totalScrollRange) {
@@ -57,6 +60,8 @@ class SettingsFragment : Fragment() {
                 }
             }
         })
+
+
         tv_notification = view.findViewById(R.id.tv_notification)
         tv_appearance = view.findViewById(R.id.tv_appearance)
 
@@ -70,11 +75,11 @@ class SettingsFragment : Fragment() {
     }
 
     private fun callNotificaionActivity() {
-        val intent = Intent (getActivity(), NotificaionActivity::class.java)
+        val intent = Intent (activity, NotificaionActivity::class.java)
         getActivity()?.startActivity(intent)
     }
     private fun callAppearanceActivity() {
-        val intent = Intent (getActivity(), AppearanceActivity::class.java)
+        val intent = Intent (activity, AppearanceActivity::class.java)
         getActivity()?.startActivity(intent)
     }
 
