@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,16 +22,16 @@ import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
 class AppearanceActivity : AppCompatActivity() {
 
     lateinit var nestedScrollView: NestedScrollView
+    lateinit var linearLayout: LinearLayout
     lateinit var recyclerView: RecyclerView
-    lateinit var imageView: ImageView
-
     lateinit var recyclerView_app: RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_appearance)
         initViews()
-        imageView = findViewById(R.id.iv_back)
-        imageView.setOnClickListener {
+        linearLayout = findViewById(R.id.linearLayout)
+        linearLayout.setOnClickListener {
+            finish()
         }
     }
 
